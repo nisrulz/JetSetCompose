@@ -2,6 +2,8 @@
 
 Example app for the talk
 
+![](scr.png)
+
 ## License
 
 ```
