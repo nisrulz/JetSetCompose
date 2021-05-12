@@ -1,4 +1,4 @@
-package com.nisrulz.androidapp.custom
+package custom
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

@@ -1,4 +1,4 @@
-package com.nisrulz.androidapp.custom
+package custom
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -13,6 +13,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import custom.ActionButton
+import custom.HeaderText
+import custom.InputBox
+import custom.MultiplierValue
 
 @Composable
 fun CoffeeMultiplierBox(onValueChange: (Int) -> Unit) {
@@ -55,7 +59,6 @@ fun BuyMeACoffeeWidget(name: String) {
             val multiplier = remember { mutableStateOf(1) }
             val nameOfUser = remember { mutableStateOf("") }
             val message = remember { mutableStateOf("") }
-            val payPalUsername = remember { mutableStateOf("") }
 
             HeaderText(name = name)
             Spacer(modifier = Modifier.height(15.dp))

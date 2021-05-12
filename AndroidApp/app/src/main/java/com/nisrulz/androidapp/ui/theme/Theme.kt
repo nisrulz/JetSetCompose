@@ -38,7 +38,7 @@ fun AndroidAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Compos
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
-        LightColorPalette
+        CustomLightColorPalette
     }
 
     MaterialTheme(
