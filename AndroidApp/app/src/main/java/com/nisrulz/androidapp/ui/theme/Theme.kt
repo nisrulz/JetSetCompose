@@ -27,6 +27,12 @@ private val LightColorPalette = lightColors(
     */
 )
 
+private val CustomLightColorPalette = lightColors(
+    primary = MyPrimaryColor,
+    primaryVariant = MyBorderColor,
+    secondary = MyLightBgColor
+)
+
 @Composable
 fun AndroidAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
     val colors = if (darkTheme) {
