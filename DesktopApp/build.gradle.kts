@@ -1,26 +1,25 @@
 import org.jetbrains.compose.compose
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.10"
-    id("org.jetbrains.compose") version "0.4.0"
+    kotlin("jvm") version "1.5.31"
+    id("org.jetbrains.compose") version "1.0.0-beta5"
 }
 
-group = "com.github.nisrulz"
-version = "1.0"
+val group = "com.github.nisrulz"
+val version = "1.0.0"
 
 repositories {
-    jcenter()
+    google()
     mavenCentral()
-    maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
 dependencies {
     implementation(compose.desktop.currentOs)
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>() {
     kotlinOptions.jvmTarget = "11"
 }
 
@@ -30,7 +29,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Exe, TargetFormat.Deb)
             packageName = "DesktopApp"
-            packageVersion = "1.0.0"
+            packageVersion = version
         }
     }
 }

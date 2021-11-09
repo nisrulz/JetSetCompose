@@ -12,7 +12,6 @@ private val CustomLightColorPalette = lightColors(
 
 @Composable
 fun DesktopTheme(content: @Composable() () -> Unit) {
-
     MaterialTheme(
         colors = CustomLightColorPalette,
         content = content
